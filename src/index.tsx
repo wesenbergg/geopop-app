@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'semantic-ui-css/semantic.min.css';
-import './index.css';
+import './styles/index.css';
 import App from './App';
 import { reducer, StateProvider } from "./state";
-import ThemeSelector from './components/ThemeSelector';
+import ThemeSelector from './components/theme/ThemeSelector';
 
 ReactDOM.render(
   

@@ -1,6 +1,6 @@
 import React from "react";
 import { Checkbox, CheckboxProps } from "semantic-ui-react";
-import { switchTheme, useStateValue } from "../state";
+import { switchTheme, useStateValue } from "../../state";
 
 const ThemeSwitch: React.FC = () => {
   const [, dispatch] = useStateValue();

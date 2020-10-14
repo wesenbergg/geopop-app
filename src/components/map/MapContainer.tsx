@@ -7,7 +7,8 @@ const position: LatLngExpression = [60.19, 24.95];
 
 const MapContainer = () => {
   return (
-    <Map center={position} zoom={12} className={CONTAINER_STYLE} >
+    <Map center={position} minZoom={3} zoom={12} className={CONTAINER_STYLE}
+      maxBounds={[ [-90, -170], [90, 190] ]} > {/** +10 horizontal offset */}
       <TileLayer
         
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

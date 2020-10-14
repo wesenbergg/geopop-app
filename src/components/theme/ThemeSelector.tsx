@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from "react-helmet";
-import { useStateValue } from '../state';
+import { useStateValue } from '../../state';
 
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

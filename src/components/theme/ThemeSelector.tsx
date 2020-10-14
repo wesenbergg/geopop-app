@@ -11,6 +11,15 @@ const ThemeSelector: React.FC<any> = ({ children }) => {
     <>
       <Helmet>
           <link rel="stylesheet" type="text/css" href={`${theme}.css`} />
+
+          { window && !window.require &&
+          <style type="text/css">
+            {` body {
+              margin-left: 15px;
+              } `}
+          </style>
+          }
+
       </Helmet>
       {children}
     </>

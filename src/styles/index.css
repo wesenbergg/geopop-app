@@ -30,6 +30,10 @@ code {
   height: 100vh;
 }
 
+.w-100 {
+  width: 100%;
+}
+
 .theme-switch {
   margin: 1rem;
 }
@@ -54,4 +58,16 @@ code {
 
 .pr-1 {
   padding-right: 1rem;
+}
+
+.pt-1 {
+  padding-top: 1rem;
+}
+
+.pl-1 {
+  padding-left: 1rem;
+}
+
+.mt-1 {
+  margin-top: 1rem !important;
 }

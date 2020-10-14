@@ -7,3 +7,37 @@ body {
   filter: hue-rotate(25deg) contrast(1) brightness(110%) invert(1) grayscale(1);
   /* filter: invert(1) grayscale(1); */
 }
+
+.input input {
+  background: #222 !important;
+  color: #ddd !important;
+}
+
+.input input::placeholder {
+  color: #666 !important;
+}
+
+h1 {
+  color: #eee;
+}
+
+.leaflet-control-attribution {
+  background-color: black !important;
+}
+
+.leaflet-control-attribution * {
+  color: #aaa !important;
+}
+
+.leaflet-control-zoom-in,
+.leaflet-control-zoom-out {
+  background-color: #999 !important;
+}
+
+.leaflet-control-zoom-in {
+  border-bottom: 1px black solid !important;
+}
+
+/* .leaflet-control-zoom-out {
+  border-top: 1px black solid !important;
+} */

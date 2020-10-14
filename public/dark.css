@@ -1,0 +1,9 @@
+body {
+  background-color: #343434;
+}
+
+.leaflet-tile-loaded {
+  -webkit-filter: hue-rotate(25deg) contrast(1) brightness(110%) invert(1) grayscale(1);
+  filter: hue-rotate(25deg) contrast(1) brightness(110%) invert(1) grayscale(1);
+  /* filter: invert(1) grayscale(1); */
+}

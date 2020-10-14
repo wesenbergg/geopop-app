@@ -1,13 +1,14 @@
 import React, { createContext, useContext, useReducer } from "react";
+import { Theme } from "../types";
 
 import { Action } from "./reducer";
 
 export type State = {
-  example: string;
+  theme: Theme;
 };
 
 const initialState: State = {
-  example: "test"
+  theme: "light"
 };
 
 export const StateContext = createContext<[State, React.Dispatch<Action>]>([

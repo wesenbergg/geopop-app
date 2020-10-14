@@ -1,0 +1,8 @@
+body {
+  background-color: #fff;
+}
+
+.leaflet-tile-loaded {
+  -webkit-filter: hue-rotate(0deg) contrast(1.1) saturate(2) grayscale(.7);
+  filter: hue-rotate(0deg) contrast(1.1) saturate(2) grayscale(.7);
+}

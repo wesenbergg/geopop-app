@@ -3,3 +3,7 @@ export interface Example {
   name: string;
   latin?: string;
 }
+
+export type Theme =
+  | 'light'
+  | 'dark';

@@ -6,3 +6,11 @@ body {
   -webkit-filter: hue-rotate(0deg) contrast(1.1) saturate(2) grayscale(.7);
   filter: hue-rotate(0deg) contrast(1.1) saturate(2) grayscale(.7);
 }
+
+.gif-input input::placeholder {
+  color: #bbb !important;
+}
+
+.gif-input input {
+  border: 1px #ddd solid;
+}

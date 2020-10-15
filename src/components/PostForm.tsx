@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useFormik } from 'formik';
 import { Button } from "semantic-ui-react";
 import { useStateValue } from "../state";
+import { Carousel, Gif, SearchBar, SearchContext } from "@giphy/react-components";
+import { IGif } from "@giphy/js-types";
 
 const PostForm: React.FC = () => {
   const [ { theme }, ] = useStateValue();
+  const [curGif, setCurGif] = useState<IGif | null>(); //new post
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { fetchGifs, searchKey, setSearch } = useContext(SearchContext);
   const formik = useFormik({
     initialValues: {
-      title: '',
+      text: '',
       location: '',
       gif: '',
     },
@@ -22,12 +27,12 @@ const PostForm: React.FC = () => {
       <form onSubmit={formik.handleSubmit}>
         <div className="ui large input w-100 pt-1">
           <input
-            id="title"
-            name="title"
+            id="text"
+            name="text"
             type="text"
-            placeholder="Add title"
+            placeholder="Add text"
             onChange={formik.handleChange}
-            value={formik.values.title}
+            value={formik.values.text}
           />
         </div>
         <div className="ui large input w-100 pt-1">
@@ -40,16 +45,21 @@ const PostForm: React.FC = () => {
             value={formik.values.location}
           />
         </div>
+
+        {curGif ?
+        <>
+          <p className="lead mb-0 mt-2">Preview</p>
+          <Gif className="gif-preview" hideAttribution noLink gif={curGif} height={125} width={200} />
+        </>: ''}
         <div className="ui large input w-100 pt-1">
-          <input
-            id="gif"
-            name="gif"
-            type="gif"
-            placeholder="Add a gif"
-            onChange={formik.handleChange}
-            value={formik.values.gif}
-          />
+          <SearchBar placeholder="Mood in GIF..." className="gif-input w-100" />
         </div>
+        <Carousel hideAttribution gifHeight={150} key={searchKey} fetchGifs={fetchGifs} onGifClick={(gif, e) => {
+            console.log("gif", gif);
+            e.preventDefault();
+            setCurGif(gif);
+          }} />
+          
         <Button type="submit" className="mt-1 w-100"
          color={theme === 'dark' ? 'grey': 'green'} inverted={theme === 'dark'}>
            Publish

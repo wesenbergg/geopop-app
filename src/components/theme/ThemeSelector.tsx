@@ -19,7 +19,6 @@ const ThemeSelector: React.FC<any> = ({ children }) => {
               } `}
           </style>
           }
-
       </Helmet>
       {children}
     </>

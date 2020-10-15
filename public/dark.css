@@ -17,7 +17,7 @@ body {
   color: #666 !important;
 }
 
-h1 {
+h1, p {
   color: #eee;
 }
 
@@ -41,3 +41,7 @@ h1 {
 /* .leaflet-control-zoom-out {
   border-top: 1px black solid !important;
 } */
+
+.gif-input input::placeholder {
+  color: #666 !important;
+}
